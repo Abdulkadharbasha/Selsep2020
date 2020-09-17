@@ -1,0 +1,4 @@
+BName@@@Add1@@@Add2@@@Add3@@@Area@@@ZCode@@@Coun@@@State@@@City@@@Result
+SRNagar@@@srnag1@@@srnag2@@@srnag3@@@srnag4@@@12345@@@INDIA@@@Andhra Pradesh@@@Nellore$$$Branch name already Exist
+SRNagar1@@@srnag11@@@srnag22@@@srnag33@@@srnag44@@@123455@@@INDIA@@@Andhra Pradesh@@@Hyderabad$$$Branch name already Exist
+SRNagar3@@@srnag111@@@srnag222@@@srnag333@@@srnag444@@@123456@@@INDIA@@@Andhra Pradesh@@@TENALI$$$Branch name already Exist

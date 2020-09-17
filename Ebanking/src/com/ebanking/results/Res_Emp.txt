@@ -1,0 +1,5 @@
+EmpName%%%LogPass%%%Role%%%Branch%%%Result
+Abdul1%%%Abdul12%%%Audit%%%MMTCBRANCH@@@Employer Already Existed...Try again
+Abdul2%%%Abdul123%%%Audit%%%MMTCBRANCH@@@New Employer Created4602 Successfully
+Abdul3%%%Abdul1234%%%Audit%%%MMTCBRANCH@@@New Employer Created4608 Successfully
+Abdul4%%%Abdul12345%%%Audit%%%MMTCBRANCH@@@New Employer Created4609 Successfully

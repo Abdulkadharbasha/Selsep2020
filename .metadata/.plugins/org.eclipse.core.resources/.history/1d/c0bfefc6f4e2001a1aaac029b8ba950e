@@ -1,0 +1,73 @@
+package com.ebanking.scripts;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class Basicscript {
+
+	public static void main(String[] args) 
+	{
+	   //Opening Browser
+	   WebDriver driver=new FirefoxDriver();
+	   driver.manage().window().maximize();
+	   driver.get("http://183.82.100.55/ranford2/");
+	   //Admin Login
+	   driver.findElement(By.id("txtuId")).sendKeys("Admin");
+	   driver.findElement(By.id("txtPword")).sendKeys("M1ndq");
+	   driver.findElement(By.id("login")).click();
+	   //Click Branch and New Branch Button along Branch Creation
+	   driver.findElement(By.xpath("//img[@src='images/Branches_but.jpg']")).click();
+	   driver.findElement(By.xpath("//input[contains(@id,'BtnNewBR')]")).click();
+	   
+	   driver.findElement(By.xpath("//input[contains(@id,'txtbName')]")).sendKeys("MMTCBRANCH");
+	   driver.findElement(By.xpath("//input[contains(@id,'txtAdd1')]")).sendKeys("DNO1423");
+	   driver.findElement(By.xpath("//input[contains(@id,'Txtadd2')]")).sendKeys("MMTC BUSSTOP");
+	   driver.findElement(By.xpath("//input[contains(@id,'txtadd3')]")).sendKeys("OPP LIC APARTMENTS");
+	   driver.findElement(By.xpath("//input[contains(@id,'txtArea')]")).sendKeys("NEAR DRIDGING CORP BUILDING");
+	   driver.findElement(By.xpath("//input[contains(@id,'txtZip')]")).sendKeys("53002");
+	   
+	   WebElement drop1=driver.findElement(By.id("lst_counrtyU"));
+	   Select s=new Select(drop1);
+	   s.selectByVisibleText("INDIA");
+	   
+	   WebElement drop2=driver.findElement(By.id("lst_stateI"));
+	   Select s1=new Select(drop2);
+	   s1.selectByVisibleText("Andhra Pradesh");
+	   
+	   WebElement drop3=driver.findElement(By.xpath("//select[contains(@id,'lst_cityI')]"));
+	   Select s3=new Select(drop3);
+	   s3.selectByVisibleText("Nellore");
+	   
+	   driver.findElement(By.name("btn_insert")).click();
+	   driver.switchTo().alert().accept();
+	   
+	   driver.findElement(By.xpath("//img[@src='images/admin_but_01.jpg']")).click();
+	   //Role creation
+	   driver.findElement(By.xpath("//img[@src='images/Roles_but.jpg']")).click();
+	   
+	   driver.findElement(By.xpath("//input[contains(@id,'btnRoles')]")).click();
+	   
+	   driver.findElement(By.xpath("//input[contains(@id,'txtRname')]")).sendKeys("MANAGER");
+	   driver.findElement(By.xpath("//input[contains(@id,'txtRDesc')]")).sendKeys("CASA");
+	   
+	   WebElement drop4=driver.findElement(By.xpath("//select[contains(@id,'lstRtypeN')]")); 
+	   Select s4=new Select(drop4);
+	   s4.selectByVisibleText("C");
+	   
+	   
+	   driver.findElement(By.xpath("//input[contains(@id,'btninsert')]")).click();
+	   driver.switchTo().alert().accept();
+	   
+	   driver.findElement(By.xpath("//img[@src='images/admin_but_01.jpg']")).click();
+	   //Emp Creation
+	   driver.findElement(By.xpath("//img[@src='images/emp_btn.jpg']")).click();
+	   driver.findElement("//input[contains(@id,'BtnNew')]").click();
+	   
+	   
+	  
+	}
+
+}

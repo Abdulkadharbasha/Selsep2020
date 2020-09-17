@@ -1,0 +1,37 @@
+package com.ebanking.master;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+public class Exepom 
+{
+@Test	
+public void Admin() 
+{
+	WebDriver driver=new FirefoxDriver();
+	driver.manage().window().maximize();
+	driver.get("http://183.82.100.55/ranford2/");
+	
+	//Passing the driver from one class to another class
+	Ranfordhp RHP=PageFactory.initElements(driver, Ranfordhp.class);
+	RHP.Login();
+	
+	PomAdminhp AHP=PageFactory.initElements(driver, PomAdminhp.class);
+	AHP.Bbtn();
+	
+	PomAdminBrancre BCRE=PageFactory.initElements(driver, PomAdminBrancre.class);
+	BCRE.Bcre();
+	
+	PomnewBrEntry BETD=PageFactory.initElements(driver, PomnewBrEntry.class);
+	BETD.BranEnt();
+	driver.switchTo().alert().accept();
+	
+	PomAdminBrancre Hom=PageFactory.initElements(driver, PomAdminBrancre.class);
+	Hom.Hbtn();
+	
+	PomAdminhp Rol=PageFactory.initElements(driver, PomAdminhp.class);
+	Rol.Rbtn();
+}
+}

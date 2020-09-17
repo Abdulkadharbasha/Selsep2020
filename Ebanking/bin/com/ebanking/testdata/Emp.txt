@@ -1,0 +1,5 @@
+EmpName%%%LogPass%%%Role%%%Branch%%%Result
+Abdul1%%%Abdul12%%%Audit%%%MMTCBRANCH
+Abdul2%%%Abdul123%%%Audit%%%MMTCBRANCH
+Abdul3%%%Abdul1234%%%Audit%%%MMTCBRANCH
+Abdul4%%%Abdul12345%%%Audit%%%MMTCBRANCH

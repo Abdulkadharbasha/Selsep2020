@@ -1,0 +1,20 @@
+package com.ebanking.master;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.PageFactory;
+
+public class Exepom 
+{
+public void Admin() 
+{
+	WebDriver driver=new FirefoxDriver();
+	driver.manage().window().maximize();
+	driver.get("http://183.82.100.55/ranford2/");
+	
+	//Passing the driver from one class to another class
+	Ranfordhp RHP=PageFactory.initElements(driver, Ranfordhp.class);
+	RHP.Login();
+	
+}
+}
